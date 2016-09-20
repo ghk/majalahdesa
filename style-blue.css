@@ -560,3 +560,9 @@ textarea { width: 96%; line-height: 1.5; padding: 5px; padding: 0.3125rem; borde
     .mh-carousel-widget .flex-direction-nav a { width: 22px; height: 22px; padding: 10px; }
     .mh-carousel-widget .flex-direction-nav a:before { font-size: 14px; padding: 7px; }
 }
+
+.mh-widget-col-1 .mh-posts-focus-wrap, .mh-widget-col-2 .mh-posts-focus-wrap {
+    float: none;
+    width: 100%;
+    margin: 0;
+}
