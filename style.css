@@ -13,3 +13,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Credits: You may remove the link in the footer, but we would appreciate any attribution to our work!
 *****/
 
+
+.mh-site-logo { display: table; }
+.mh-site-logo .custom-logo-link, .mh-site-logo .mh-header-text { display: table-cell; vertical-align: middle; }
+
