@@ -22,7 +22,7 @@ function mh_magazine_lite_customize_register($wp_customize) {
     $wp_customize->add_setting('mh_magazine_lite_options[author_box]', array('default' => 'enable', 'type' => 'option', 'sanitize_callback' => 'mh_sanitize_select'));
     $wp_customize->add_setting('mh_magazine_lite_options[post_nav]', array('default' => 'enable', 'type' => 'option', 'sanitize_callback' => 'mh_sanitize_select'));
 	$wp_customize->add_setting('mh_magazine_lite_options[premium_version_upgrade]', array('default' => '', 'type' => 'option', 'sanitize_callback' => 'esc_attr'));
-    $wp_customize->add_setting('mh_magazine_lite_options[full_bg]', array('default' => '', 'type' => 'option', 'sanitize_callback' => 'mh_sanitize_checkbox'));
+    $wp_customize->add_setting('mh_magazine_lite_options[full_bg]', array('default' => 1, 'type' => 'option', 'sanitize_callback' => 'mh_sanitize_checkbox'));
 
     /***** Add Controls *****/
 
@@ -94,7 +94,7 @@ if (!function_exists('mh_magazine_lite_theme_options')) {
 if (!function_exists('mh_magazine_lite_default_options')) {
 	function mh_magazine_lite_default_options() {
 		$default_options = array(
-			'full_bg' => '',
+			'full_bg' => 1,
 			'excerpt_length' => 25,
 			'excerpt_more' => '[...]',
 			'sb_position' => 'right',
