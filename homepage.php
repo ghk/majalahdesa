@@ -48,9 +48,9 @@
 			<?php dynamic_sidebar('home-5'); ?>
 		</div>
 	<?php endif; ?>
-	<?php if (is_active_sidebar('home-6')) { ?>
+	<?php if (is_active_sidebar('sidebar')) { ?>
 		<div class="mh-widget-col-1 mh-sidebar mh-home-sidebar mh-home-area-6">
-        	<?php dynamic_sidebar('home-6'); ?>
+        	<?php dynamic_sidebar('sidebar'); ?>
 		</div>
 	<?php } elseif (is_active_sidebar('home-2') || is_active_sidebar('home-3') || is_active_sidebar('home-4') || is_active_sidebar('home-5')) { ?>
 		<div class="mh-widget-col-1 mh-sidebar mh-home-sidebar mh-home-area-6">
