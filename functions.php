@@ -97,6 +97,8 @@ if (!function_exists('mh_magazine_lite_scripts')) {
 		if (is_singular() && comments_open() && get_option('thread_comments') == 1) {
 			wp_enqueue_script('comment-reply');
 		}
+		$mh_magazine_lite_options = mh_magazine_lite_theme_options();
+		wp_enqueue_style( 'theme_type', get_template_directory_uri() . '/style-'.$mh_magazine_lite_options['theme_type'].'.css' );
 	}
 }
 add_action('wp_enqueue_scripts', 'mh_magazine_lite_scripts');

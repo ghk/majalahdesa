@@ -32,7 +32,7 @@ function mh_magazine_lite_customize_register($wp_customize) {
     $wp_customize->add_control('author_box', array('label' => esc_html__('Author Box', 'mh-magazine-lite'), 'section' => 'mh_magazine_lite_layout', 'settings' => 'mh_magazine_lite_options[author_box]', 'priority' => 2, 'type' => 'select', 'choices' => array('enable' => esc_html__('Enable', 'mh-magazine-lite'), 'disable' => esc_html__('Disable', 'mh-magazine-lite'))));
     $wp_customize->add_control('post_nav', array('label' => esc_html__('Post/Attachment Navigation', 'mh-magazine-lite'), 'section' => 'mh_magazine_lite_layout', 'settings' => 'mh_magazine_lite_options[post_nav]', 'priority' => 4, 'type' => 'select', 'choices' => array('enable' => esc_html__('Enable', 'mh-magazine-lite'), 'disable' => esc_html__('Disable', 'mh-magazine-lite'))));
 	$wp_customize->add_control('full_bg', array('label' => esc_html__('Scale background image to full size', 'mh-magazine-lite'), 'section' => 'background_image', 'settings' => 'mh_magazine_lite_options[full_bg]', 'priority' => 99, 'type' => 'checkbox'));
-	$wp_customize->add_control('theme_type', array('label' => esc_html__('Tipe Tema', 'mh-magazine-lite'), 'section' => 'colors', 'settings' => 'mh_magazine_lite_options[theme_type]', 'priority' => 2, 'type' => 'select', 'choices' => array('red' => esc_html__('Merah', 'mh-magazine-lite'), 'green' => esc_html__('Hijau', 'mh-magazine-lite'), 'blue' => esc_html__('Biru', 'mh-magazine-lite'))));
+	$wp_customize->add_control('theme_type', array('label' => esc_html__('Tipe Tema', 'mh-magazine-lite'), 'section' => 'colors', 'settings' => 'mh_magazine_lite_options[theme_type]', 'priority' => 2, 'type' => 'select', 'choices' => array('red' => esc_html__('Merah', 'mh-magazine-lite'), 'green' => esc_html__('Hijau', 'mh-magazine-lite'), 'blue' => esc_html__('Biru', 'mh-magazine-lite'), 'black' => esc_html__('Hitam', 'mh-magazine-lite'))));
 }
 add_action('customize_register', 'mh_magazine_lite_customize_register');
 
@@ -70,6 +70,7 @@ function mh_sanitize_theme_type($input) {
 		'red' => esc_html__('Merah', 'mh-magazine-lite'),
 		'green' => esc_html__('Hijau', 'mh-magazine-lite'),
 		'blue' => esc_html__('Biru', 'mh-magazine-lite'),
+		'black' => esc_html__('Hitam', 'mh-magazine-lite'),
 	);
 	if (array_key_exists($input, $valid)) {
 		return $input;
