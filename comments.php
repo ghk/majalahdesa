@@ -47,14 +47,14 @@ if (have_comments()) {
 	if (comments_open()) { ?>
 		<h4 id="mh-comments" class="mh-widget-title mh-comment-form-title">
 			<span class="mh-widget-title-inner">
-				<?php esc_html_e('Be the first to comment', 'mh-magazine-lite'); ?>
+				<?php esc_html_e('Jadi yang Pertama Berkomentar', 'mh-magazine-lite'); ?>
 			</span>
 		</h4><?php
 	}
 }
 if (comments_open()) {
 	comment_form(array(
-		'title_reply' => esc_html__('Leave a Reply', 'mh-magazine-lite'),
+		'title_reply' => esc_html__('Tinggalkan Balasan', 'mh-magazine-lite'),
         'comment_notes_before' => '<p class="comment-notes">' . esc_html__('Your email address will not be published.', 'mh-magazine-lite') . '</p>',
         'comment_notes_after'  => '',
         'comment_field' => '<p class="comment-form-comment"><label for="comment">' . esc_html__('Comment', 'mh-magazine-lite') . '</label><br/><textarea id="comment" name="comment" cols="45" rows="5" aria-required="true"></textarea></p>'

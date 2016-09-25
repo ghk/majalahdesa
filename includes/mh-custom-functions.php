@@ -186,24 +186,24 @@ if (!function_exists('mh_magazine_lite_postnav')) {
 									if ($count == 1) {
 										echo '<a href="' . esc_url(get_permalink($parent_post)) . '">' . '<span>' . esc_html__('Back to article', 'mh-magazine-lite') . '</span>' . '</a>';
 									} else {
-										previous_image_link('%link', '<span>' . esc_html__('Previous', 'mh-magazine-lite') . '</span>');
+										previous_image_link('%link', '<span>' . esc_html__('Sebelumnya', 'mh-magazine-lite') . '</span>');
 									}
 								} else {
 									echo '<a href="' . esc_url(get_permalink($parent_post)) . '">' . '<span>' . esc_html__('Back to article', 'mh-magazine-lite') . '</span>' . '</a>';
 								}
 							} else {
 								$prev_thumb = get_the_post_thumbnail($prev_post->ID, 'mh-magazine-lite-small');
-								previous_post_link('%link', $prev_thumb . '<span>' . esc_html__('Previous', 'mh-magazine-lite') . '</span>' . '<p>%title</p>');
+								previous_post_link('%link', $prev_thumb . '<span>' . esc_html__('Sebelumnya', 'mh-magazine-lite') . '</span>' . '<p>%title</p>');
 							}
 						echo '</div>' . "\n";
 					}
 					if (!empty($next_post) || $attachment) {
 						echo '<div class="mh-col-1-2 mh-post-nav-item mh-post-nav-next">' . "\n";
 							if ($attachment) {
-								next_image_link('%link', '<span>' . esc_html__('Next', 'mh-magazine-lite') . '</span>');
+								next_image_link('%link', '<span>' . esc_html__('Selanjutnya', 'mh-magazine-lite') . '</span>');
 							} else {
 								$next_thumb = get_the_post_thumbnail($next_post->ID, 'mh-magazine-lite-small');
-								next_post_link('%link', $next_thumb . '<span>' . esc_html__('Next', 'mh-magazine-lite') . '</span>' . '<p>%title</p>');
+								next_post_link('%link', $next_thumb . '<span>' . esc_html__('Selanjutnya', 'mh-magazine-lite') . '</span>' . '<p>%title</p>');
 							}
 						echo '</div>' . "\n";
 					}

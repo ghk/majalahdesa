@@ -251,8 +251,27 @@ html[xmlns] .flexslider .slides { display: block; }
 .page-numbers a { display: block; }
 .pagelink { display: inline-block; font-weight: 700; color: #fff; padding: 10px 15px; padding: 0.625rem 0.9375rem; background: #38b7ee; }
 a .pagelink { color: #444; background: #eee; }
-.mh-post-nav-wrap { padding: 20px; margin-bottom: 30px; background: #f5f5f5; text-transform: uppercase; }
-.mh-post-nav { width: 48.75%; }
+.mh-post-nav-wrap { padding: 20px; background: #f5f5f5; text-transform: uppercase; }
+/*.mh-post-nav { width: 48.75%; }*/
+.mh-post-nav { margin-top: 30px; margin-bottom: 30px; }
+.mh-post-nav-next img {
+    float: right;
+    margin-left: 15px;
+}
+.mh-post-nav-prev img {
+    float: left;
+    margin-right: 15px;
+}
+.mh-post-nav span, .mh-post-nav p {
+    display: block;
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+.mh-post-nav span {
+    font-weight: 700;
+}
 .mh-post-nav a { font-size: 14px; font-size: 0.875rem; font-weight: 700; }
 .mh-post-nav-prev { float: left; margin-right: 2.5%; }
 .mh-post-nav-next { float: right; text-align: right; }
