@@ -17,3 +17,8 @@ Credits: You may remove the link in the footer, but we would appreciate any attr
 .mh-site-logo { display: table; }
 .mh-site-logo .custom-logo-link, .mh-site-logo .mh-header-text { display: table-cell; vertical-align: middle; }
 
+
+#signup-content {
+    padding: 70px 20px;
+    background-color: #fff;
+}

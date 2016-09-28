@@ -27,7 +27,10 @@
 <?php } ?>
 <div class="mh-copyright-wrap">
 	<div class="mh-container mh-container-inner clearfix">
-		<p class="mh-copyright"><?php printf(esc_html__('Copyright &copy; %1$s', 'mh-magazine-lite'), date("Y")); ?></p>
+		<p class="mh-copyright">
+			<?php printf(esc_html__('Copyright &copy; %1$s', 'mh-magazine-lite'), date("Y")); ?>
+			<a href="/wp-login.php" style="float: right;">Log Masuk</a>
+		</p>
 	</div>
 </div>
 <?php mh_after_footer(); ?>

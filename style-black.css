@@ -768,3 +768,6 @@ input[type=submit]:hover { background: #2e2e2e; }
 @media only screen and (max-width: 420px) {
     .mh-copyright-wrap { padding: 15px 20px; }
 }
+#signup-content {
+    background-color: #2e2e2e;
+}
