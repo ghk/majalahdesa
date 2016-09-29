@@ -13,7 +13,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 html { font-size: 100%; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; }
 body { font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 14px; font-size: 0.875rem; line-height: 1.6; color: #2a2a2a; background: #f7f7f7; word-wrap: break-word; }
 .fullbg .custom-background { -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
-.mh-container, .mh-container-inner { width: 100%; max-width: 1180px; margin: 0 auto; position: relative; }
+.mh-container, .mh-container-inner { width: 100%; max-width: 1080px; margin: 0 auto; position: relative; }
 .mh-container-outer { margin: 25px auto; -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.17); -moz-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.17); box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.17); }
 .mh-wrapper { padding: 30px; background: #fff; }
 .mh-content { width: 65.83%; overflow: hidden; }
