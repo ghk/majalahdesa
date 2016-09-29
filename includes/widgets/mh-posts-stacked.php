@@ -49,37 +49,13 @@ class mh_magazine_lite_posts_stacked extends WP_Widget {
 				}
 				echo '<div class="mh-posts-stacked-widget clearfix">' . "\n";
 					while ($widget_posts->have_posts()) : $widget_posts->the_post();
-						if ($counter === 1) { ?>
-							<div class="mh-posts-stacked-wrap mh-posts-stacked-large">
-								<div class="post-<?php the_ID(); ?> mh-posts-stacked-content">
-									<div class="mh-posts-stacked-thumb mh-posts-stacked-thumb-large">
-										<a class="mh-posts-stacked-overlay mh-posts-stacked-overlay-large" href="<?php the_permalink(); ?>"></a><?php
-										if (has_post_thumbnail()) {
-											the_post_thumbnail('mh-magazine-lite-large');
-										} else {
-											echo '<img class="mh-image-placeholder" src="' . get_template_directory_uri() . '/images/placeholder-large.png' . '" alt="' . esc_html__('No Picture', 'mh-magazine-lite') . '" />';
-										} ?>
-										<article class="mh-posts-stacked-item">
-											<h3 class="mh-posts-stacked-title mh-posts-stacked-title-large">
-												<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
-													<?php the_title(); ?>
-												</a>
-											</h3>
-											<div class="mh-posts-stacked-meta mh-posts-stacked-meta-large">
-												<?php mh_magazine_lite_loop_meta(); ?>
-											</div>
-										</article>
-									</div>
-								</div>
-							</div><?php
-						}
 						if ($counter === 2) {
 							echo '<div class="mh-posts-stacked-wrap mh-posts-stacked-columns clearfix">' . "\n";
 						}
 						if ($counter === 4 || $counter === 5) {
 							$stacked_border = ' mh-posts-stacked-overlay-last';
 						}
-						if ($counter >= 2) { ?>
+						if ($counter >= 1) { ?>
 							<div class="mh-posts-stacked-wrap mh-posts-stacked-small">
 								<div class="post-<?php the_ID(); ?> mh-posts-stacked-content">
 									<div class="mh-posts-stacked-thumb mh-posts-stacked-thumb-small">

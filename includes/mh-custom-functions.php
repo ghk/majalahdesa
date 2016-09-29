@@ -115,9 +115,9 @@ if (!function_exists('mh_magazine_lite_post_meta')) {
 			echo '<span class="entry-meta-author author vcard"><i class="fa fa-user"></i><a class="fn" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>' . "\n";
 			echo '<span class="entry-meta-categories"><i class="fa fa-folder-open-o"></i>' . get_the_category_list(', ', '') . '</span>' . "\n";
 			echo '<span class="entry-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-scroll" href="' . esc_url(get_permalink() . '#mh-comments') . '">' . get_comments_number() . '</a></span>' . "\n";
-            echo '<span class="entry-meta-facebook"><a style="color: #3b5998; font-size: 18px; font-height: 18px;" href="' . esc_url(get_permalink() . '#mh-comments') . '"> <i class="fa fa-facebook-square"></i></a></span>' . "\n";
-            echo '<span class="entry-meta-facebook"><a style="color: #00aced; font-size: 18px; font-height: 18px;" href="' . esc_url(get_permalink() . '#mh-comments') . '"> <i class="fa fa-twitter-square"></i></a></span>' . "\n";
-            echo '<span class="entry-meta-facebook"><a style="color: #C92228; font-size: 18px; font-height: 18px;" href="' . esc_url(get_permalink() . '#mh-comments') . '"> <i class="fa fa-pinterest-square"></i></a></span>' . "\n";
+            echo '<span class="entry-meta-social facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=' . esc_url("".get_permalink()) . '"> <i class="fa fa-facebook-square"></i></a></span>' . "\n";
+            echo '<span class="entry-meta-social twitter"><a href="https://twitter.com/home?status=' . esc_url("".get_permalink()) . '"> <i class="fa fa-twitter-square"></i></a></span>' . "\n";
+            echo '<span class="entry-meta-social pinterest"><a href="https://pinterest.com/pin/create/button/?url=&media=' . esc_url("".get_permalink()) . '"> <i class="fa fa-pinterest-square"></i></a></span>' . "\n";
 		echo '</p>' . "\n";
 	}
 }
