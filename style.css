@@ -26,17 +26,3 @@ Credits: You may remove the link in the footer, but we would appreciate any attr
     margin-bottom: 20px;
 }
 
-.entry-meta-social a {
-    font-size: 18px;
-    line-height: 18px;
-}
-
-.entry-meta-social.facebook a {
-    color: #3b5998;
-}
-.entry-meta-social.twitter a {
-    color: #4099FF;
-}
-.entry-meta-social.pinterest a {
-    color: #C92228;
-}
