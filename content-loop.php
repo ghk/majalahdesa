@@ -7,7 +7,7 @@
 				if($thumbnail != "") {
 					echo $thumbnail;
 				} else {
-					echo '<img class="attachment-thumbnail size-thumbnail" src="' . get_template_directory_uri() . '/images/placeholder-medium.png' . '" width="150" height="150" sizes="(max-width: 150px) 100vw, 150px">';
+					echo '<img class="attachment-thumbnail size-thumbnail" src="' . get_template_directory_uri() . '/images/placeholder-square.png' . '" width="150" height="150" sizes="(max-width: 150px) 100vw, 150px">';
 				}
 			} else if (has_post_thumbnail()) {
 				the_post_thumbnail('mh-magazine-lite-medium');
