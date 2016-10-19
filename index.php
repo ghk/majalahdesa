@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="mh-wrapper clearfix">
-	<div id="main-content" class="mh-loop mh-content" role="main"><?php
+	<div id="main-content" class="mh-loop mh-content" role="main" <?php if($_SERVER["SERVER_NAME"] == "kabar.sideka.id") { ?> style="width: 100%;" <?php } ?> ><?php
 		mh_before_page_content();
 		if (have_posts()) {
 			if (is_home() && !is_front_page()) { ?>

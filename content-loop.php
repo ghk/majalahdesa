@@ -2,11 +2,21 @@
 <article <?php post_class('mh-loop-item clearfix'); ?>>
 	<figure class="mh-loop-thumb">
 		<a href="<?php the_permalink(); ?>"><?php
-			if (has_post_thumbnail()) {
+			if ($_SERVER["SERVER_NAME"] == "kabar.sideka.id") {
+				$thumbnail = get_post_meta($post->ID, 'thumbnail_html', true) ;
+				if($thumbnail != "") {
+					echo $thumbnail;
+				} else {
+					echo '<img class="mh-image-placeholder" src="' . get_template_directory_uri() . '/images/placeholder-medium.png' . '" style="width: 150px; height: 150px;" />';
+				}
+			} else if (has_post_thumbnail()) {
 				the_post_thumbnail('mh-magazine-lite-medium');
 			} else {
 				echo '<img class="mh-image-placeholder" src="' . get_template_directory_uri() . '/images/placeholder-medium.png' . '" alt="No Picture" />';
 			} ?>
+			<?php if($_SERVER["SERVER_NAME"] == "kabar.sideka.id") { ?>
+				<?php ?>
+			<?php } ?>
 		</a>
 	</figure>
 	<div class="mh-loop-content clearfix">
@@ -23,5 +33,20 @@
 		<div class="mh-loop-excerpt">
 			<?php the_excerpt(); ?>
 		</div>
+		<?php  if ($_SERVER["SERVER_NAME"] == "kabar.sideka.id") {
+			$blog_id = get_post_meta($post->ID, 'blogid', true) ;
+			switch_to_blog($blog_id);
+			$site_title = get_bloginfo( 'name' );
+			$site_url = get_bloginfo('url');
+			$site_description = get_bloginfo( 'description' );
+			restore_current_blog();
+		?>
+		<div style="margin-top: 10px;">
+			<a href="<?= $site_url ?>" style="text-decoration: underline;">
+			<?= $site_title ?> - <?= $site_description ?>
+			</a>
+		</div>
+		<?php } ?>
+
 	</div>
 </article>

@@ -1,3 +1,4 @@
+<?php if($_SERVER["SERVER_NAME"] != "kabar.sideka.id"){ ?>
 <aside class="mh-widget-col-1 mh-sidebar" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar"><?php
 	if (is_active_sidebar('sidebar')) {
 		dynamic_sidebar('sidebar');
@@ -14,3 +15,4 @@
 		</div><?php
 	} ?>
 </aside>
+<?php } ?>
