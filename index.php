@@ -1,4 +1,17 @@
 <?php get_header(); ?>
+<?php if($_SERVER["SERVER_NAME"] == "kabar.sideka.id") { ?> 
+<style>
+@media screen and (max-width: 767px)
+{
+	.js .slicknav_menu {
+	    display: none;
+	}
+	.js .mh-main-nav {
+	    display: block;
+	}
+}
+</style>
+<?php } ?>
 <div class="mh-wrapper clearfix">
 	<div id="main-content" class="mh-loop mh-content" role="main" <?php if($_SERVER["SERVER_NAME"] == "kabar.sideka.id") { ?> style="width: 100%;" <?php } ?> ><?php
 		mh_before_page_content();

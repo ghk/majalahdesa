@@ -26,3 +26,78 @@ Credits: You may remove the link in the footer, but we would appreciate any attr
     margin-bottom: 20px;
 }
 
+
+#dbt-banner {
+	width: 100%; 
+	height: 80px; 
+	background-color: 
+	#1374ae; 
+	clear: both; 
+	vertical-align: middle; 
+	color: #fff; 
+	padding: 10px 0px    ;
+}
+
+#dbt-banner .img1 {
+	margin-left: 20px; 
+	margin-top: 10px;
+}
+
+#dbt-banner .text1 {
+	display: none;
+	margin-left: 20px; 
+	color: #fff;
+}
+
+#dbt-banner .img2 {
+	margin-right: 20px; 
+	height: 80px; 
+	width: auto; 
+	float: right;
+}
+
+@media (max-width: 520px) {
+	#dbt-banner {
+		padding: 5px 0px;
+		height: 50px;
+	}
+	#dbt-banner .img1 {
+		display: none;
+	}
+	#dbt-banner .img2 {
+		height: 50px;
+	}
+	#dbt-banner .text1 {
+		display: block;
+		float: left;
+		max-width: 250px;
+	}	
+}
+
+@media (max-width: 390px) {
+	#dbt-banner .text1 {
+		max-width: 200px;
+	}	
+}
+@media (max-width: 340px) {
+	#dbt-banner .img2 {
+		display: none;
+	}	
+}
+
+#banner {
+	position: absolute; top: 10px; right: 20px;
+}
+
+#banner img {
+	width: 250px;
+}
+
+@media (max-width: 520px) {
+#banner {
+	position: static;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+}
+}

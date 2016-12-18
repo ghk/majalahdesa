@@ -43,14 +43,24 @@ add_action('mh_after_footer', 'mh_magazine_boxed_container_close');
 
 if (!function_exists('mh_magazine_lite_custom_header')) {
 	function mh_magazine_lite_custom_header() {
-		echo '<div class="mh-custom-header clearfix">' . "\n";
+		echo '<div class="mh-custom-header clearfix" style="position: relative;">' . "\n";
+			if(sideka_is_desa_dbt()){
+				$json = file_get_contents('http://broadband-desa.go.id/banner');
+				$obj = json_decode($json);
+				$img1 = urldecode($obj->banner[0]->img1);
+				$img2 = urldecode($obj->banner[0]->img2);
+				$text1 = urldecode($obj->banner[0]->text1);
+				$url = urldecode($obj->banner[0]->link);
+				
+				echo "<div id='dbt-banner'> <a href='".$url."'><img class='img1' src='".$img1."' /><span class='text1'>".$text1."</span></a><a href='".$url."'><img class='img2' src='".$img2."' /></a></div>";
+			}
 			if (get_header_image()) {
 				echo '<a class="mh-header-image-link" href="' . esc_url(home_url('/')) . '" title="' . esc_attr(get_bloginfo('name')) . '" rel="home">' . "\n";
 					echo '<img class="mh-header-image" src="' . esc_url(get_header_image()) . '" height="' . esc_attr(get_custom_header()->height) . '" width="' . esc_attr(get_custom_header()->width) . '" alt="' . esc_attr(get_bloginfo('name')) . '" />' . "\n";
 				echo '</a>' . "\n";
 			}
 			if (function_exists('has_custom_logo') && has_custom_logo() || display_header_text()) {
-				echo '<div class="mh-site-identity">' . "\n";
+				echo '<div class="mh-site-identity" style="position: relative;">' . "\n";
 					echo '<div class="mh-site-logo" role="banner">' . "\n";
 						if (function_exists('the_custom_logo')) {
 							the_custom_logo();
@@ -85,6 +95,13 @@ if (!function_exists('mh_magazine_lite_custom_header')) {
 						}
 					echo '</div>' . "\n";
 				echo '</div>' . "\n";
+			}
+			$desa_code = sideka_get_desa_code();
+			if($desa_code && substr($desa_code,0,strlen("33.20.10.")) === ("33.20.10.")){
+				echo "<div id='banner'>";
+				echo "<a href='http://visitkarimunjawa.id'>";
+				echo "<img src='http://visitkarimunjawa.id/banner.png' />";
+				echo "</a></div>";
 			}
 		echo '</div>' . "\n";
 	}
