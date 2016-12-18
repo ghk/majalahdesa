@@ -47,6 +47,7 @@ Credits: You may remove the link in the footer, but we would appreciate any attr
 	display: none;
 	margin-left: 20px; 
 	color: #fff;
+	font-size: 11px;
 }
 
 #dbt-banner .img2 {
@@ -59,24 +60,24 @@ Credits: You may remove the link in the footer, but we would appreciate any attr
 @media (max-width: 520px) {
 	#dbt-banner {
 		padding: 5px 0px;
-		height: 50px;
+		height: 35px;
 	}
 	#dbt-banner .img1 {
 		display: none;
 	}
 	#dbt-banner .img2 {
-		height: 50px;
+		height: 35px;
 	}
 	#dbt-banner .text1 {
 		display: block;
 		float: left;
-		max-width: 250px;
+		max-width: 280px;
 	}	
 }
 
 @media (max-width: 390px) {
 	#dbt-banner .text1 {
-		max-width: 200px;
+		max-width: 240px;
 	}	
 }
 @media (max-width: 340px) {
